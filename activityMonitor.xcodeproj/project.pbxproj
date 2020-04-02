@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F15AFF124365DF7004AA365 /* D.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1F15AFF024365DF7004AA365 /* D.wav */; };
 		1F7ABA1E24353644002B8655 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ABA1D24353644002B8655 /* AppDelegate.swift */; };
 		1F7ABA2024353644002B8655 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ABA1F24353644002B8655 /* SceneDelegate.swift */; };
 		1F7ABA2224353644002B8655 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7ABA2124353644002B8655 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F15AFF024365DF7004AA365 /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = D.wav; path = ../roliBlock/roliBlock/sounds/D.wav; sourceTree = "<group>"; };
+		1F15AFF224365DFD004AA365 /* D.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = D.wav; sourceTree = "<group>"; };
 		1F7ABA1A24353644002B8655 /* activityMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = activityMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F7ABA1D24353644002B8655 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F7ABA1F24353644002B8655 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		1F7ABA1124353644002B8655 = {
 			isa = PBXGroup;
 			children = (
+				1F15AFF024365DF7004AA365 /* D.wav */,
 				1F7ABA1C24353644002B8655 /* activityMonitor */,
 				1F7ABA1B24353644002B8655 /* Products */,
 			);
@@ -56,6 +60,7 @@
 		1F7ABA1C24353644002B8655 /* activityMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				1F15AFF224365DFD004AA365 /* D.wav */,
 				1F7ABA1D24353644002B8655 /* AppDelegate.swift */,
 				1F7ABA1F24353644002B8655 /* SceneDelegate.swift */,
 				1F7ABA2124353644002B8655 /* ViewController.swift */,
@@ -126,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7ABA2A24353648002B8655 /* LaunchScreen.storyboard in Resources */,
+				1F15AFF124365DF7004AA365 /* D.wav in Resources */,
 				1F7ABA2724353648002B8655 /* Assets.xcassets in Resources */,
 				1F7ABA2524353644002B8655 /* Main.storyboard in Resources */,
 			);

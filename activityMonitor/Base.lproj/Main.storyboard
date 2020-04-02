@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,288 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="activityMonitor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2JY-jr-Rkp">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="IwD-O3-fek">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RE-sx-Zed">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="84.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity monitor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrN-4E-YnP">
+                                                        <rect key="frame" x="88" y="28" width="238" height="28"/>
+                                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="28"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstItem="xrN-4E-YnP" firstAttribute="centerX" secondItem="2RE-sx-Zed" secondAttribute="centerX" id="9hX-Pb-gi8"/>
+                                                    <constraint firstItem="xrN-4E-YnP" firstAttribute="centerY" secondItem="2RE-sx-Zed" secondAttribute="centerY" id="tr9-nQ-jzq"/>
+                                                </constraints>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pKP-EJ-d0L">
+                                                <rect key="frame" x="0.0" y="85.5" width="414" height="84"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ex: goal , activity" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDa-fR-mLr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="5cy-7f-D3u"/>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="f9M-Xv-KTU"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🕕" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PFM-Ks-Glg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="84"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="EvC-Nz-lFd"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="CYu-iq-qRn">
+                                                <rect key="frame" x="0.0" y="170.5" width="414" height="84.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Gb-kM-JY7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="144-6M-u1N"/>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="aAO-wf-AWg"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🕕" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ge5-Vc-iIG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="84.5"/>
+                                                        <color key="backgroundColor" red="0.44313725490196076" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Ddm-TQ-8xh"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="IpR-i5-i8Y">
+                                                <rect key="frame" x="0.0" y="256" width="414" height="84"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nTc-O9-ctU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="4re-jb-wPg"/>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="uc6-qg-Y5e"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🕕" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qq4-uP-UVT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="84"/>
+                                                        <color key="backgroundColor" red="0.44313725490196076" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="0w2-gj-zcL"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="mxH-ba-gLb">
+                                                <rect key="frame" x="0.0" y="341" width="414" height="84.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O1D-br-Hme">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Z9j-LS-LAk"/>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="f5o-uy-8Pe"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🕕" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VeF-Fa-tZR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="84.5"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="FhQ-Ry-tHD"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="iAk-og-VSV">
+                                                <rect key="frame" x="0.0" y="426.5" width="414" height="84.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b1Z-uE-nMg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="SeG-6R-jL3"/>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="nrz-bg-U4b"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🕕" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePr-gN-u03">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="84.5"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="Q1K-Hd-SYs"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dOA-kg-krx">
+                                                <rect key="frame" x="0.0" y="512" width="414" height="84"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="85y-BM-ejT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="EcC-X3-Pio"/>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="x0l-6r-xTo"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🕕" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQ1-xu-aTO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="84"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="7xU-Fc-1Pb"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="ytw-9b-csK">
+                                                <rect key="frame" x="0.0" y="597" width="414" height="84.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgb-hq-ugF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84.5"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AFj-cP-h78"/>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Irq-P7-NwN"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🕕" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XcB-GW-5qv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="84.5"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="anj-ov-pBx"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="jUA-Le-9H6">
+                                                <rect key="frame" x="0.0" y="682.5" width="414" height="84"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wpU-jq-SZw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="1Sn-B6-R7d"/>
+                                                            <action selector="activity:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="bqx-E1-j2f"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField hidden="YES" opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="🕕" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8DI-pO-7kB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="84"/>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="BFS-fg-FUN"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRY-Jb-Qni">
+                                                <rect key="frame" x="0.0" y="767.5" width="414" height="84.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fp-qw-8ZT" userLabel="count down label ">
+                                                        <rect key="frame" x="207" y="42.5" width="0.0" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBA-gR-awm">
+                                                        <rect key="frame" x="150" y="10.5" width="114" height="64"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                        <state key="normal" title="START">
+                                                            <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lOo-i0-thU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="OBA-gR-awm" firstAttribute="centerY" secondItem="qRY-Jb-Qni" secondAttribute="centerY" id="RaD-vO-oW3"/>
+                                                    <constraint firstItem="4Fp-qw-8ZT" firstAttribute="centerX" secondItem="qRY-Jb-Qni" secondAttribute="centerX" id="fXd-Gn-D0T"/>
+                                                    <constraint firstItem="OBA-gR-awm" firstAttribute="centerX" secondItem="qRY-Jb-Qni" secondAttribute="centerX" id="hde-w6-cNE"/>
+                                                    <constraint firstItem="4Fp-qw-8ZT" firstAttribute="centerY" secondItem="qRY-Jb-Qni" secondAttribute="centerY" id="ylN-id-PqV"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="IwD-O3-fek" secondAttribute="bottom" id="UIF-lu-z0K"/>
+                                    <constraint firstItem="IwD-O3-fek" firstAttribute="leading" secondItem="2JY-jr-Rkp" secondAttribute="leading" id="Ywi-w1-2lq"/>
+                                    <constraint firstItem="IwD-O3-fek" firstAttribute="top" secondItem="2JY-jr-Rkp" secondAttribute="top" id="aTn-DC-6xQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="IwD-O3-fek" secondAttribute="trailing" id="fEN-wg-J9Z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2JY-jr-Rkp" secondAttribute="trailing" id="BIJ-PW-F6E"/>
+                            <constraint firstAttribute="bottom" secondItem="2JY-jr-Rkp" secondAttribute="bottom" id="Hin-YF-fAc"/>
+                            <constraint firstItem="2JY-jr-Rkp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WFo-Wx-aXx"/>
+                            <constraint firstItem="2JY-jr-Rkp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dw6-9t-Wz5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
