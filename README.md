@@ -13,4 +13,4 @@
 
 
 
- <img src="activityMonitor/shot.png" width="400" height="790"> <img src="activityMonitor/shot2.png" width="400" height="790">
+ <img src="activityMonitor/shot.png" width="400" height="700"> <img src="activityMonitor/shot2.png" width="400" height="700">
